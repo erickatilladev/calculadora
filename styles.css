@@ -1,0 +1,125 @@
+/* Importar fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #e3f2fd, #bbdefb); /* Gradiente de fundo suave */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna */
+    margin: 0; /* Remover margens */
+    transition: background 0.3s; /* Transição para o fundo */
+}
+
+.dark-theme {
+    background: #121212; /* Fundo escuro */
+    color: #ffffff; /* Texto claro */
+}
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px; /* Diminuir o espaçamento entre os botões */
+    max-width: 350px; /* Diminuir a largura máxima */
+    padding: 15px; /* Diminuir o padding */
+    border-radius: 30px; /* Bordas mais arredondadas */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); /* Sombra mais suave */
+    background-color: #ffffff; /* Fundo branco */
+    transition: transform 0.3s ease, background-color 0.3s; /* Suavizar a transformação ao passar o mouse */
+    overflow: hidden; /* Prevenir transbordamento */
+}
+
+.dark-theme .calculator {
+    background-color: #424242; /* Fundo da calculadora no tema escuro */
+}
+
+#display {
+    grid-column: span 4;
+    padding: 20px; /* Aumentar o padding */
+    font-size: 2.2em; /* Diminuir o tamanho da fonte do display */
+    text-align: right;
+    background-color: #e1f5fe; /* Cor de fundo mais suave para o display */
+    border: 3px solid #039be5; /* Borda em um tom mais escuro */
+    border-radius: 20px; /* Bordas arredondadas */
+    margin-bottom: 15px; /* Aumentar o espaço abaixo do display */
+    box-shadow: inset 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra interna */
+    transition: background-color 0.3s; /* Transição suave */
+    font-weight: bold; /* Negrito para o display */
+}
+
+.dark-theme #display {
+    background-color: #303030; /* Cor de fundo do display no tema escuro */
+    border: 3px solid #90caf9; /* Borda em um tom mais claro */
+}
+
+.button {
+    padding: 15px; /* Diminuir o padding dos botões */
+    font-size: 1.4em; /* Diminuir o tamanho da fonte dos botões */
+    text-align: center;
+    border: none;
+    border-radius: 20px; /* Bordas arredondadas */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease; /* Transições mais suaves */
+    background-color: #1976d2; /* Cor de fundo dos botões */
+    color: #ffffff; /* Cor do texto */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra dos botões */
+    font-weight: bold; /* Negrito para os botões */
+}
+
+.dark-theme .button {
+    background-color: #bb86fc; /* Cor de fundo dos botões no tema escuro */
+    color: #000000; /* Cor do texto no tema escuro */
+}
+
+.operation {
+    background: linear-gradient(145deg, #66bb6a, #388e3c); /* Gradiente para operações */
+    font-weight: bold; /* Negrito para botões de operação */
+}
+
+.dark-theme .operation {
+    background: linear-gradient(145deg, #4caf50, #2e7d32); /* Gradiente para operações no tema escuro */
+}
+
+.equals {
+    background: linear-gradient(145deg, #ff7043, #c62828); /* Gradiente para o botão igual */
+    color: white;
+    grid-column: span 2; /* O botão igual ocupa duas colunas */
+    font-weight: bold; /* Negrito para o botão igual */
+}
+
+.dark-theme .equals {
+    background: linear-gradient(145deg, #ff5722, #c62828); /* Gradiente para o botão igual no tema escuro */
+}
+
+.zero {
+    grid-column: span 2; /* O botão zero ocupa duas colunas */
+}
+
+.button:active {
+    transform: scale(0.95); /* Efeito de clique */
+}
+
+/* Efeito de foco para acessibilidade */
+.button:focus {
+    outline: 2px solid #ff5722; /* Destacar o botão em foco */
+    outline-offset: 2px;
+}
+
+/* Adicionar uma animação de sombra ao hover */
+.button:hover {
+    animation: shadow-pulse 0.3s ease forwards;
+}
+
+/* Keyframes para animação de pulso de sombra */
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+    50% {
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+}

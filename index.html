@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora do Ericão</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1 style="grid-column: span 4; text-align: center; margin-bottom: 20px; color: #6200ea;">Calculadora do Ericão</h1>
+        <button class="button toggle-theme" onclick="toggleTheme()">🌙</button>
+        <input type="text" id="display" disabled>
+        <button class="button" onclick="appendNumber('7')">7</button>
+        <button class="button" onclick="appendNumber('8')">8</button>
+        <button class="button" onclick="appendNumber('9')">9</button>
+        <button class="button operation" onclick="setOperation('/')">÷</button>
+        <button class="button" onclick="appendNumber('4')">4</button>
+        <button class="button" onclick="appendNumber('5')">5</button>
+        <button class="button" onclick="appendNumber('6')">6</button>
+        <button class="button operation" onclick="setOperation('*')">×</button>
+        <button class="button" onclick="appendNumber('1')">1</button>
+        <button class="button" onclick="appendNumber('2')">2</button>
+        <button class="button" onclick="appendNumber('3')">3</button>
+        <button class="button operation" onclick="setOperation('-')">−</button>
+        <button class="button zero" onclick="appendNumber('0')">0</button>
+        <button class="button" onclick="calculatePercentage()">%</button>
+        <button class="button" onclick="clearDisplay()">C</button>
+        <button class="button equals" onclick="calculate()">=</button>
+        <button class="button operation" onclick="setOperation('+')">+</button>
+        <button class="button" onclick="calculateSquareRoot()">√</button>
+        <button class="button" onclick="memoryAdd()">M+</button>
+        <button class="button" onclick="memoryRecall()">MR</button>
+        <button class="button" onclick="memoryClear()">MC</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
